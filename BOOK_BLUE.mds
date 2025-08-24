@@ -12,9 +12,9 @@ Model ("BOOK_BLUE")
 
 	aniEnum
 	{
-			ani			("s_S0"					1	"s_S0"	0.0	0.0	M.	"BOOK_BLUE_USE.asc"		F	12	12)
-			ani			("t_S0_2_S1"			1	"s_S1"	0.0	0.0	M.	"BOOK_BLUE_USE.asc"		F	145	195)
-			ani			("s_S1"					1	"s_S1"	0.0	0.0	M.	"BOOK_BLUE_USE.asc"		F	12	195)
+			ani			("s_S0"					1	"s_S0"	0.0	0.0	M.	"BOOK_BLUE_USE.asc"		F	12	12 FPS:60 SPD:150)
+			ani			("t_S0_2_S1"			1	"s_S1"	0.0	0.0	M.	"BOOK_BLUE_USE.asc"		F	12	12 FPS:60 SPD:150)
+			ani			("s_S1"					1	"s_S1"	0.0	0.0	M.	"BOOK_BLUE_USE.asc"		F	12	12 FPS:60 SPD:150)
 			{
 				*eventSFX 	(158	"Book_nextpage")
 			}
