@@ -140,14 +140,14 @@ Model ("HuS")
 // ---------------------------------------------------------------------------------------------------------------
 //	TURNING
 
-			ani			("t_RunTurnL"			20	"t_RunTurnL"	0.2	0.2	M.	"Hum_TurnL_A05.asc"			F	1	20)
+			ani			("t_RunTurnL"			20	"t_RunTurnL"	0.2	0.2	M.	"HUM_TURNL_M03.ASC"			F	1	20)
 			{
 				*eventSFXGrnd	(10	"Turn")
 				*eventSFXGrnd	(20	"Turn")
 			}
 
 
-			ani			("t_RunTurnR"			20	"t_RunTurnR"	0.2	0.2	M.	"Hum_TurnR_A05.asc"			F	1	20)
+			ani			("t_RunTurnR"			20	"t_RunTurnR"	0.2	0.2	M.	"HUM_TURNR_A03.ASC"			F	1	20)
 //			ani			("t_RunTurnR"			20	"t_RunTurnR"	0.2	0.2	M.	"Hum_TurnR_A01.asc"			R	0	24)
 			{
 				*eventSFXGrnd	(10	"Turn")
@@ -729,40 +729,40 @@ Model ("HuS")
 
 
 	// MAGIC
-			ani			("t_Run_2_Mag"			1	"s_Mag"			0.0 0.0 M.	"Hum_MagReady_M01.asc"		F	0	 4)
+			ani			("t_Run_2_Mag"			1	"s_Mag"			0.0 0.0 M.	"Hum_MagReady_M01.asc"		F	0	 4 SPD:150)
 			ani			("s_Mag"				1	"s_Mag"			0.0 0.0 M.	"Hum_MagReady_M01.asc"		F	5	5)
-			ani			("t_Mag_2_MagRun"		1	"s_MagRun"		0.0 0.0 M.	"Hum_MagReady_M01.asc"		F	6	12)
+			ani			("t_Mag_2_MagRun"		1	"s_MagRun"		0.0 0.0 M.	"Hum_MagReady_M01.asc"		F	6	12 SPD:150)
 			{
 				*eventTag		(8 "DEF_FIGHTMODE"	"MAG")
 			}
 
-			ani			("t_MagRun_2_Mag"		1	"s_Mag"			0.0 0.0 M.	"Hum_MagReady_M01.asc"		R	6	12)
+			ani			("t_MagRun_2_Mag"		1	"s_Mag"			0.0 0.0 M.	"Hum_MagReady_M01.asc"		R	6	12 SPD:150)
 			{
 				*eventTag		(8 "DEF_FIGHTMODE"	"")
 			}
 			aniAlias	("t_Mag_2_Run"			1	""				0.0 0.0 M.	"t_Run_2_Mag"				R)
 
 		// Magie beim Rennen ziehen
-			ani			("t_Move_2_MagMove"		2	""				0.2	0.2	M.	"Hum_MagDrawMove.asc"	F	1	19)
+			ani			("t_Move_2_MagMove"		2	""				0.2	0.2	M.	"Hum_MagDrawMove.asc"	F	1	19 SPD:150)
 			{
 				*eventTag		(14 "DEF_FIGHTMODE"	"MAG")
 			}
-			ani			("t_MagMove_2_Move"		2	""				0.2	0.2	M.	"Hum_MagDrawMove.asc"	R	1	19)
+			ani			("t_MagMove_2_Move"		2	""				0.2	0.2	M.	"Hum_MagDrawMove.asc"	R	1	19 SPD:150)
 			{
 				*eventTag		(14 "DEF_FIGHTMODE"	"")
 			}
 
 
 	// 1H - WEAPON
-			ani			("t_Run_2_1h"			1	"s_1h"			0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			F	1	2)
-			ani			("s_1h"					1	"s_1h"			0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			F	3	3)
-			ani			("t_1h_2_1hRun"			1	"s_1hRun"		0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			F   4	15)
+			ani			("t_Run_2_1h"			1	"s_1h"			0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			F	1	2 SPD:150)
+			ani			("s_1h"					1	"s_1h"			0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			F	3	3 SPD:150)
+			ani			("t_1h_2_1hRun"			1	"s_1hRun"		0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			F   4	15 SPD:150)
 			{
 				*eventTag		(4 "DEF_FIGHTMODE"	"1H")
 				*eventTag		(4	"DEF_DRAWSOUND")
 			}
 
-			ani			("t_1hRun_2_1h"			1	"s_1h"			0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			R 	4	15)
+			ani			("t_1hRun_2_1h"			1	"s_1h"			0.0 0.0 M.	"Hum_1hSDrawT0_A01.asc"			R 	4	15 SPD:150)
 			{
 				*eventTag		(4	"DEF_UNDRAWSOUND")
 				*eventTag		(4	"DEF_FIGHTMODE"	"")
@@ -770,12 +770,12 @@ Model ("HuS")
 			aniAlias	("t_1h_2_Run"			1	""				0.0 0.1 M.	"t_Run_2_1h"				R)
 
 		// Schwert beim Rennen ziehen
-			ani			("t_Move_2_1hMove"		2	""				0.2	0.2	M.	"Hum_1hS_MoveReady_M01.asc"	F	1	24)
+			ani			("t_Move_2_1hMove"		2	""				0.2	0.2	M.	"Hum_1hS_MoveReady_M01.asc"	F	1	24 SPD:110)
 			{
 				*eventTag		(6 "DEF_FIGHTMODE"	"1H")
 				*eventTag		(6	"DEF_DRAWSOUND")
 			}
-			ani			("t_1hMove_2_Move"		2	""				0.2	0.2	M.	"Hum_1hS_MoveReady_M01.asc"	R	1	24)
+			ani			("t_1hMove_2_Move"		2	""				0.2	0.2	M.	"Hum_1hS_MoveReady_M01.asc"	R	1	24 SPD:110)
 			{
 				*eventTag		(6	"DEF_UNDRAWSOUND")
 				*eventTag		(6 "DEF_FIGHTMODE"	"")
@@ -784,15 +784,15 @@ Model ("HuS")
 
 
 // 2h - WEAPON READY
-			ani			("t_Run_2_2h"			1	"s_2h"			0.0 0.0 M.	"Hum_2hDrawT2.asc"			F	1	4)
-			ani			("s_2h"					1	"s_2h"			0.0 0.0 M.	"Hum_2hDrawT2.asc"			F	5	5)
-			ani			("t_2h_2_2hRun"			1	"s_2hRun"		0.0 0.0 M.	"Hum_2hDrawT2.asc"			F   6	20)
+			ani			("t_Run_2_2h"			1	"s_2h"			0.0 0.0 M.	"Hum_2hDrawT2.asc"			F	1	4 SPD:130)
+			ani			("s_2h"					1	"s_2h"			0.0 0.0 M.	"Hum_2hDrawT2.asc"			F	5	5 SPD:130)
+			ani			("t_2h_2_2hRun"			1	"s_2hRun"		0.0 0.0 M.	"Hum_2hDrawT2.asc"			F   6	20 SPD:130)
 			{
 				*eventTag		(6 "DEF_FIGHTMODE"	"2h")
 				*eventTag		(6	"DEF_DRAWSOUND")
 			}
 
-			ani			("t_2hRun_2_2h"			1	"s_2h"			0.0 0.0 M.	"Hum_2hDrawT2.asc"			R   6	20)
+			ani			("t_2hRun_2_2h"			1	"s_2h"			0.0 0.0 M.	"Hum_2hDrawT2.asc"			R   6	20 SPD:130)
 			{
 				*eventTag		(6	"DEF_UNDRAWSOUND")
 				*eventTag		(6 "DEF_FIGHTMODE"	"")
@@ -801,12 +801,12 @@ Model ("HuS")
 			aniAlias	("t_2h_2_Run"			1	"s_Run"			0.0 0.1 M.	"t_Run_2_2h"				R)
 
 		// Schwert beim Rennen ziehen
-			ani			("t_Move_2_2hMove"		2	""				0.2	0.2	M.	"Hum_2hDrawMove.asc"		F	1	24)
+			ani			("t_Move_2_2hMove"		2	""				0.2	0.2	M.	"Hum_2hDrawMove.asc"		F	1	24 SPD:110)
 			{
 				*eventTag		(7 "DEF_FIGHTMODE"	"2H")
 				*eventTag		(7	"DEF_DRAWSOUND")
 			}
-			ani			("t_2hMove_2_Move"		2	""				0.2	0.2	M.	"Hum_2hDrawMove.asc"		R	1	24)
+			ani			("t_2hMove_2_Move"		2	""				0.2	0.2	M.	"Hum_2hDrawMove.asc"		R	1	24 SPD:110)
 			{
 				*eventTag		(7	"DEF_UNDRAWSOUND")
 				*eventTag		(7 "DEF_FIGHTMODE"	"")
@@ -814,16 +814,16 @@ Model ("HuS")
 
 
 	// BOW
-			ani			("t_Run_2_Bow"			1	"s_Bow"			0.0 0.0 M.	"Hum_BowDraw.asc"		F	1	5)
-			ani			("s_Bow"				1	"s_Bow"			0.0 0.0 M.	"Hum_BowDraw.asc"		F	6	6)
-			ani			("t_Bow_2_BowRun"		1	"s_BowRun"		0.0 0.0 M.	"Hum_BowDraw.asc"		F   7	19)
+			ani			("t_Run_2_Bow"			1	"s_Bow"			0.0 0.0 M.	"Hum_BowDraw.asc"		F	1	5 SPD:170)
+			ani			("s_Bow"				1	"s_Bow"			0.0 0.0 M.	"Hum_BowDraw.asc"		F	6	6 SPD:170)
+			ani			("t_Bow_2_BowRun"		1	"s_BowRun"		0.0 0.0 M.	"Hum_BowDraw.asc"		F   7	19 SPD:170)
 			{
 				*eventTag		(7	"DEF_FIGHTMODE"  "BOW")
 				*eventSFX		(7	"Drawsound_Bow")
 		        *eventTag		(9	"DEF_PLACE_MUNITION"	"ZS_RIGHTHAND")
 			}
 
-			ani			("t_BowRun_2_Bow"		1	"s_Bow"			0.0 0.0 M.	"Hum_BowDraw.asc"		R	7	19)
+			ani			("t_BowRun_2_Bow"		1	"s_Bow"			0.0 0.0 M.	"Hum_BowDraw.asc"		R	7	19 SPD:170)
 			{
 				*eventTag		(7	"DEF_FIGHTMODE"  "")
 				*eventSFX		(7	"Drawsound_Bow")
@@ -832,13 +832,13 @@ Model ("HuS")
 			aniAlias	("t_Bow_2_Run"			1	""				0.0 0.1 M.	"t_Run_2_Bow"			R)
 
 		// Bogen beim Rennen ziehen
-			ani			("t_Move_2_BowMove"		2	""				0.2	0.2	M.	"Hum_BowDrawMove.asc"	F	1	19)
+			ani			("t_Move_2_BowMove"		2	""				0.2	0.2	M.	"Hum_BowDrawMove.asc"	F	1	19 SPD:170)
 			{
 				*eventTag		(7	"DEF_FIGHTMODE"  "BOW")
 				*eventSFX		(7	"Drawsound_Bow")
 		        *eventTag		(9	"DEF_PLACE_MUNITION"	"ZS_RIGHTHAND")
 			}
-			ani			("t_BowMove_2_Move"		2	""				0.2	0.2	M.	"Hum_BowDrawMove.asc"	R	1	19)
+			ani			("t_BowMove_2_Move"		2	""				0.2	0.2	M.	"Hum_BowDrawMove.asc"	R	1	19 SPD:170)
 			{
 				*eventTag		(7	"DEF_FIGHTMODE"  "")
 				*eventSFX		(7	"Drawsound_Bow")
@@ -847,9 +847,9 @@ Model ("HuS")
 
 
 	// CROSSBOW
-			ani			("t_Run_2_CBow"			1	"s_CBow"		0.0 0.0 M.	"Hum_CBowDraw.asc"		F	1	4)
-			ani			("s_CBow"				1	"s_CBow"		0.0 0.0 M.	"Hum_CBowDraw.asc"		F	5	5)
-			ani			("t_CBow_2_CBowRun"		1	"s_CBowRun"		0.0 0.0 M.	"Hum_CBowDraw.asc"		F  	6	39)
+			ani			("t_Run_2_CBow"			1	"s_CBow"		0.0 0.0 M.	"Hum_CBowDraw.asc"		F	1	4 SPD:110)
+			ani			("s_CBow"				1	"s_CBow"		0.0 0.0 M.	"Hum_CBowDraw.asc"		F	5	5 SPD:110)
+			ani			("t_CBow_2_CBowRun"		1	"s_CBowRun"		0.0 0.0 M.	"Hum_CBowDraw.asc"		F  	6	39 SPD:110)
 			{
 				*eventTag		(7 "DEF_FIGHTMODE"	"CBOW")
 				*eventMMStartAni (6	"S_SHOOT"	"ZS_RIGHTHAND")
@@ -857,7 +857,7 @@ Model ("HuS")
 		        *eventTag		(6	"DEF_PLACE_MUNITION"	"ZS_LEFTHAND")
 			}
 
-			ani			("t_CBowRun_2_CBow"		1	"s_CBow"		0.0 0.0 M.	"Hum_CBowDraw.asc"		R  	6	39)
+			ani			("t_CBowRun_2_CBow"		1	"s_CBow"		0.0 0.0 M.	"Hum_CBowDraw.asc"		R  	6	39 SPD:110)
 			{
 				*eventTag		(7 "DEF_FIGHTMODE"	"")
 				*eventSFX		(7	"Drawsound_Bow")
@@ -866,14 +866,14 @@ Model ("HuS")
 			aniAlias	("t_CBow_2_Run"			1	""				0.0 0.1 M.	"t_Run_2_CBow"			R)
 
 		// Armbrust beim Rennen ziehen
-			ani			("t_Move_2_CBowMove"	2	""				0.2	0.2	M.	"Hum_CBowDrawMove.asc"	F	1	39)
+			ani			("t_Move_2_CBowMove"	2	""				0.2	0.2	M.	"Hum_CBowDrawMove.asc"	F	1	39 SPD:110)
 			{
 				*eventTag		(7 "DEF_FIGHTMODE"	"CBOW")
 				*eventMMStartAni (6	"S_SHOOT"	"ZS_RIGHTHAND")
 				*eventSFX		(7	"Drawsound_Bow")
 		        *eventTag		(6	"DEF_PLACE_MUNITION"	"ZS_LEFTHAND")
 			}
-			ani			("t_CBowMove_2_Move"	2	""				0.2	0.2	M.	"Hum_CBowDrawMove.asc"	R	1	39)
+			ani			("t_CBowMove_2_Move"	2	""				0.2	0.2	M.	"Hum_CBowDrawMove.asc"	R	1	39 SPD:110)
 			{
 				*eventTag		(7 "DEF_FIGHTMODE"	"")
 				*eventSFX		(7	"Drawsound_Bow")
@@ -882,38 +882,38 @@ Model ("HuS")
 
 
 	// TRANSITIONS FIST
-			aniBlend	("t_Fist_2_Bow"			"s_Bow"				0.1	0.2)
-			aniBlend	("t_Fist_2_Cbow"		"s_CBow"			0.1	0.2)
-			aniBlend	("t_Fist_2_Mag"			"s_Mag"				0.1	0.2)
+			aniBlend	("t_Fist_2_Bow"			"s_Bow"				0.1	0.2 SPD:190)
+			aniBlend	("t_Fist_2_Cbow"		"s_CBow"			0.1	0.2 SPD:190)
+			aniBlend	("t_Fist_2_Mag"			"s_Mag"				0.1	0.2 SPD:190)
 
 	// TRANSITIONS Magic
-			aniBlend	("t_Mag_2_Bow"			"s_Bow"				0.1	0.2)
-			aniBlend	("t_Mag_2_CBow"			"s_CBow"			0.1	0.2)
-			aniBlend	("t_Mag_2_Fist"			"s_Fist"			0.1	0.2)
-			aniBlend	("t_Mag_2_1h"			"s_1h"				0.1	0.2)
-			aniBlend	("t_Mag_2_2h"			"t_2h_2_2hRun"				0.1	0.2)
+			aniBlend	("t_Mag_2_Bow"			"s_Bow"				0.1	0.2 SPD:190)
+			aniBlend	("t_Mag_2_CBow"			"s_CBow"			0.1	0.2 SPD:190)
+			aniBlend	("t_Mag_2_Fist"			"s_Fist"			0.1	0.2 SPD:190)
+			aniBlend	("t_Mag_2_1h"			"s_1h"				0.1	0.2 SPD:190)
+			aniBlend	("t_Mag_2_2h"			"t_2h_2_2hRun"				0.1	0.2 SPD:190)
 
 	// TRANSITIONS 1H
-			aniBlend	("t_1h_2_Bow"			"s_Bow"				0.1	0.2)
-			aniBlend	("t_1h_2_Cbow"			"s_CBow"			0.1	0.2)
-			aniBlend	("t_1h_2_Mag"			"s_Mag"				0.1	0.2)
+			aniBlend	("t_1h_2_Bow"			"s_Bow"				0.1	0.2 SPD:190)
+			aniBlend	("t_1h_2_Cbow"			"s_CBow"			0.1	0.2 SPD:190)
+			aniBlend	("t_1h_2_Mag"			"s_Mag"				0.1	0.2 SPD:190)
 
 	// TRANSITIONS 2H - Sword
-			aniBlend	("t_2h_2_Bow"			"s_Bow"				0.1	0.2)
-			aniBlend	("t_2h_2_Cbow"			"s_CBow"			0.1	0.2)
-			aniBlend	("t_2h_2_Mag"			"s_Mag"				0.1	0.2)
+			aniBlend	("t_2h_2_Bow"			"s_Bow"				0.1	0.2 SPD:190)
+			aniBlend	("t_2h_2_Cbow"			"s_CBow"			0.1	0.2 SPD:190)
+			aniBlend	("t_2h_2_Mag"			"s_Mag"				0.1	0.2 SPD:190)
 
 	// TRANSITIONS Bow
-			aniBlend	("t_Bow_2_Mag"			"s_Mag"				0.1	0.2)
-			aniBlend	("t_Bow_2_Fist"			"s_Fist"			0.1	0.2)
-			aniBlend	("t_Bow_2_1h"			"s_1h"				0.1	0.2)
-			aniBlend	("t_Bow_2_2h"			"s_2h"				0.1	0.2)
+			aniBlend	("t_Bow_2_Mag"			"s_Mag"				0.1	0.2 SPD:190)
+			aniBlend	("t_Bow_2_Fist"			"s_Fist"			0.1	0.2 SPD:190)
+			aniBlend	("t_Bow_2_1h"			"s_1h"				0.1	0.2 SPD:190)
+			aniBlend	("t_Bow_2_2h"			"s_2h"				0.1	0.2 SPD:190)
 
 	// TRANSITIONS Crossbow
-			aniBlend	("t_Cbow_2_Mag"			"s_Mag"				0.1	0.2)
-			aniBlend	("t_Cbow_2_Fist"		"s_Fist"			0.1	0.2)
-			aniBlend	("t_Cbow_2_1h"			"s_1h"				0.1	0.2)
-			aniBlend	("t_Cbow_2_2h"			"s_2h"				0.1	0.2)
+			aniBlend	("t_Cbow_2_Mag"			"s_Mag"				0.1	0.2 SPD:190)
+			aniBlend	("t_Cbow_2_Fist"		"s_Fist"			0.1	0.2 SPD:190)
+			aniBlend	("t_Cbow_2_1h"			"s_1h"				0.1	0.2 SPD:190)
+			aniBlend	("t_Cbow_2_2h"			"s_2h"				0.1	0.2 SPD:190)
 
 
 //////////////////////////
@@ -1231,9 +1231,9 @@ Model ("HuS")
 			ani			("t_WndShoot_2_Stand"		1	""				0.0	0.1	M.	"Hum_MagCastWin_M02.asc"	F	46	50)
 
 // Heal, Teleport, 
-			ani			("t_MagRun_2_HeaShoot"		1	"s_HeaShoot"	0.1	0.0	M.	"Hum_MagCastHeal_M01.asc"	F	1	37 FPS:10)
+			ani			("t_MagRun_2_HeaShoot"		1	"s_HeaShoot"	0.1	0.0	M.	"Hum_MagCastHeal_M01.asc"	F	1	37 FPS:10 SPD:150)
 			ani			("s_HeaShoot"				1	"s_HeaShoot"	0.0	0.1	M.	"Hum_MagCastHeal_M01.asc"	F	37	300	FPS:10)
-			ani			("t_HeaShoot_2_Stand"		1	""				0.0	0.1	M.	"Hum_MagCastHeal_M01.asc"	F	300	339 FPS:10)
+			ani			("t_HeaShoot_2_Stand"		1	""				0.0	0.1	M.	"Hum_MagCastHeal_M01.asc"	F	300	339 FPS:10 SPD:150)
 
 // Pyrokinesis
 			ani			("t_MagRun_2_PyrShoot"		1	"s_PyrShoot"	0.1	0.0	M.	"Hum_MagPyro_A01.asc"		F	1	21)
@@ -1437,7 +1437,7 @@ Model ("HuS")
 ///////////////////////
 
 //	1h-RUN
-			ani			("s_1hRun"					1	"s_1hRun"		0.1 0.1 MI	"Hum_Amb_1hRunT0_A01.asc"	F	1	50	FPS:10)
+			ani			("s_1hRun"					1	"s_1hRun"		0.1 0.1 MI	"HUM_AMB_2HRUNT1_M01.ASC"	F	1	50	FPS:10)
 			ani			("t_1hRun_2_1hRunL"			1	"s_1hRunL"		0.1	0.0	M.	"Hum_1hRunT0_A01.asc"			F	1	11)
 
 //	1h-Run-Loop
@@ -2665,11 +2665,11 @@ Model ("HuS")
 
 // ---------------------------------------------------------------------------------------------------------------
 // Aufs Bett legen (Höhe = 50 cm, kein Kissen)
-			ani			("t_BedHigh_Front_Stand_2_S0"	1	"s_BedHigh_Front_S0"	0.2	0.0	M.	"Hum_BedHighFront_M02.asc"		F	0	4)
+			ani			("t_BedHigh_Front_Stand_2_S0"	1	"s_BedHigh_Front_S0"	0.2	0.0	M.	"Hum_BedHighFront_M02.asc"		F	0	4 SPD:150)
 			ani			("s_BedHigh_Front_S0"			1	"s_BedHigh_Front_S0"	0.0	0.0	M.	"Hum_BedHighFront_M02.asc"		F	5	5)
-			aniAlias	("t_BedHigh_Front_S0_2_Stand"	1	""						0.0	0.2	M.	"t_BedHigh_Front_Stand_2_S0"	R)
+			aniAlias	("t_BedHigh_Front_S0_2_Stand"	1	""						0.0	0.2	M.	"t_BedHigh_Front_Stand_2_S0"	R SPD:150)
 
-			ani			("t_BedHigh_Front_S0_2_S1"		1	"s_BedHigh_Front_S1"	0.0	0.0	M.	"Hum_BedHighFront_M02.asc"		F	6	57	FPS:10)
+			ani			("t_BedHigh_Front_S0_2_S1"		1	"s_BedHigh_Front_S1"	0.0	0.0	M.	"Hum_BedHighFront_M02.asc"		F	6	57	FPS:10 SPD:150)
 			{
 				*eventTag	(7	"DEF_INV_TORCH")
 			}
@@ -2677,11 +2677,11 @@ Model ("HuS")
 			ani			("s_BedHigh_Front_S1"			1	"s_BedHigh_Front_S1"	0.0	0.0	MI	"Hum_BedHighAmbient_A01.asc"	F	1	39)
 			aniAlias	("t_BedHigh_Front_S1_2_S0"		1	"s_BedHigh_Front_S0"	0.0	0.0	M.	"t_BedHigh_Front_S0_2_S1"		R)
 
-			ani			("t_BedHigh_Back_Stand_2_S0"	1	"s_BedHigh_Back_S0"		0.2	0.0	M.	"Hum_BedHighBack_M02.asc"		F	0	4)
+			ani			("t_BedHigh_Back_Stand_2_S0"	1	"s_BedHigh_Back_S0"		0.2	0.0	M.	"Hum_BedHighBack_M02.asc"		F	0	4 SPD:150)
 			ani			("s_BedHigh_Back_S0"			1	"s_BedHigh_Back_S0"		0.0	0.0	M.	"Hum_BedHighBack_M02.asc"		F	5	5)
 			aniAlias	("t_BedHigh_Back_S0_2_Stand"	1	""						0.0	0.2	M.	"t_BedHigh_Back_Stand_2_S0"		R)
 
-			ani			("t_BedHigh_Back_S0_2_S1"		1	"s_BedHigh_Back_S1"		0.0	0.0	M.	"Hum_BedHighBack_M02.asc"		F	6	57	FPS:10)
+			ani			("t_BedHigh_Back_S0_2_S1"		1	"s_BedHigh_Back_S1"		0.0	0.0	M.	"Hum_BedHighBack_M02.asc"		F	6	57	FPS:10 SPD:150)
 			{
 				*eventTag	(7	"DEF_INV_TORCH")
 			}
@@ -2830,18 +2830,18 @@ Model ("HuS")
 
 // ---------------------------------------------------------------------------------------------------------------
 // BOOK READING
-			ani			("t_Book_Stand_2_S0"		1	"s_Book_S0"		0.2	0.0	M.	"Hum_BookReading_M01.asc"	F	1	11)
+			ani			("t_Book_Stand_2_S0"		1	"s_Book_S0"		0.2	0.0	M.	"Hum_BookReading_M01.asc"	F	1	11 SPD:150)
 			ani			("s_Book_S0"				1	"s_Book_S0"		0.0	0.0	M.	"Hum_BookReading_M01.asc"	F	12	12)
 			aniAlias	("t_Book_S0_2_Stand"		1	""				0.0	0.2	M.	"t_Book_Stand_2_S0"			R)
 
-			ani			("t_Book_S0_2_S1"			1	"s_Book_S1"		0.0	0.0	M.	"Hum_BookReading_M01.asc"	F	146	195	FPS:10)
+			ani			("t_Book_S0_2_S1"			1	"s_Book_S1"		0.0	0.0	M.	"Hum_BookReading_M01.asc"	F	146	195	FPS:50 SPD:150)
 			{
 				*eventTag	(147	"DEF_INV_TORCH")
 				*eventSFX	(154	"book_nextpage"	R:1000	EMPTY_SLOT	)
 				*eventSFX	(170	"MOB_BOOK_MOVEPAGE"	R:1000	EMPTY_SLOT	)
 			}
 
-			ani			("s_Book_S1"				1	"s_Book_S1"		0.0	0.0	M.	"Hum_BookReading_M01.asc"	F	12	195	FPS:10)
+			ani			("s_Book_S1"				1	"s_Book_S1"		0.0	0.0	M.	"Hum_BookReading_M01.asc"	F	12	195	FPS:50)
 		//	aniAlias	("t_Book_S1_2_S0"			1	"s_Book_S0"		0.0	0.0	M.	"t_Book_S0_2_S1"			R)
 			aniBlend	("t_Book_S1_2_S0"				"s_Book_S0"		0.2	0.2	)
 			
@@ -3879,4 +3879,3 @@ Model ("HuS")
 
 //************************************************************************************
 // DemetorRitual
-
